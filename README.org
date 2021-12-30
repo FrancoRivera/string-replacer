@@ -1,8 +1,12 @@
-#+TITLE: Readme
+#+TITLE: String replacer
 
+Replace a string in the buffer with any Unicode character(s)
 
-This package is not yet in ELPA/MELPA/wtv
+For example, for making horizontal rules in org-mode
 
+Note: This is not production ready (yet), hence, this package is not yet in ELPA/MELPA/wtv
+
+* Installation
 
 Just clone it to a known path
 
@@ -15,3 +19,31 @@ and then load it up
 #+begin_src emacs-lisp
 (load-file "~/known/path/for/string-replacer-mode.el")
 #+end_src
+
+* Usage
+
+To enable it by default set the `global-string-replacer-mode` flag to true
+
+#+begin_src elisp
+(global-string-replacer-mode t)
+#+end_src
+
+
+You can also toggle it on by running the minor mode
+
+** Just one buffer
+M-x global-string-replacer-mode-t
+
+** For all buffers
+M-x string-replacer-mode-t
+
+** Only on on org-mode
+#+begin_src elisp
+(add-hook 'org-mode-hook 'string-replacer-mode-on)
+#+end_src
+
+Test string:
+
+------
+
+Output:
