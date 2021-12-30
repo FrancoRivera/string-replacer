@@ -1,0 +1,17 @@
+#+TITLE: Readme
+
+
+This package is not yet in ELPA/MELPA/wtv
+
+
+Just clone it to a known path
+
+#+begin_src bash
+git clone https://github.com/FrancoRivera/string-replacer-mode /known/path/for/repos
+#+end_src
+
+and then load it up
+
+#+begin_src emacs-lisp
+(load-file "~/known/path/for/string-replacer-mode.el")
+#+end_src
