@@ -47,3 +47,26 @@ Test string:
 ------
 
 Output:
+
+** Advanced config
+
+#+begin_src elisp
+(setq string-replacer--meme-replace-string "❯") ;  You can use any string here (copy and paste it from somewhere)
+(setq string-replacer--font-height 1.0) ; how big u want the meme
+(setq string-replacer--font-width  1.0) ; for now we must set the width of the character, if ur corrent string wraps around, just make this number larger
+(add-hook 'org-mode-hook 'string-replacer-mode-on) ; enable the thing
+
+; you can also set the color and the flags and other stuff, but i hvent set a flag for those yet
+#+end_src
+
+
+Some chararacers you can use:
+
+#+begin_src elisp
+(setq-default string-replacer--meme-replace-string "-")
+(setq string-replacer--meme-replace-string "o")
+(setq string-replacer--meme-replace-string "◌")
+(setq string-replacer--meme-replace-string "❯")
+(setq string-replacer--meme-replace-string "⎓") ; note that this is wider, so increase font-width to 1.75+
+(setq string-replacer--meme-replace-string "🌵") ; note that this is wide af, so increase font-width to 2.0+
+#+end_src
